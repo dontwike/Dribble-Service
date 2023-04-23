@@ -32,8 +32,8 @@ public class PostServiceImpl implements PostService {
             postEntity = postEntityRepository.save(postEntity);
 
             post.setId(postEntity.getId());
-//            post.setFile(postEntity.getImage());
-//            post.setImage(postEntity.getImage());
+            post.setFile(postEntity.getImage());
+            post.setImage(postEntity.getImage());
 
         } catch (Exception e) {
             throw new Exception("Could not save Post: " + e);
